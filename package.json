@@ -4,7 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "cypress:iphone": "npx cypress open --config-file iphone.env.config.js",
+    "cypress:notebook": "npx cypress open --config-file notebook.env.config.js",
+    "cypress:iphone:edge:headed": "cypress run --browser edge --headed --config-file iphone.env.config.js",
+    "cypress:iphone:electron:headless": "cypress run --browser electron --headless --config-file iphone.env.config.js",
+    "cypress:notebook:electron:headed": "cypress run --browser electron --headed --config-file notebook.env.config.js",
+    "cypress:notebook:edge:headless": "cypress run --browser edge --headless --config-file notebook.env.config.js"
   },
   "author": "",
   "license": "ISC",
